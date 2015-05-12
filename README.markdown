@@ -1,4 +1,10 @@
-# RestSharp - Simple .NET REST Client [![Build status](https://ci.appveyor.com/api/projects/status/5vdwwducje0miayf?svg=true)](https://ci.appveyor.com/project/hallem/restsharp)
+# Forked from 
+## RestSharp - Simple .NET REST Client [![Build status](https://ci.appveyor.com/api/projects/status/5vdwwducje0miayf?svg=true)](https://ci.appveyor.com/project/hallem/restsharp)
+
+# Changes: 
+## Added build flags
+* UNITY - Disable XML parser for our own purpose. XML LINQ does not work with UNITY 3D. 
+* USE_COMPRESSION - Disable compression headers (use none) from the client. The compression is a problem in e.g. Azure.
 
 ### [Official Site/Blog][1] - [@RestSharp][2]  
 ### License: Apache License 2.0
