@@ -65,7 +65,9 @@ namespace RestSharp
         {
             this.Parameters = new List<Parameter>();
             this.Files = new List<FileParameter>();
+            #if !UNITY
             this.XmlSerializer = new XmlSerializer();
+            #endif
             this.JsonSerializer = new JsonSerializer();
 
             this.OnBeforeDeserialization = r => { };

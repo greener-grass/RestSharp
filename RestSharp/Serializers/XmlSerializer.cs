@@ -18,11 +18,14 @@ using System;
 using System.Collections;
 using System.Globalization;
 using System.Linq;
+#if !UNITY
 using System.Xml.Linq;
+#endif
 using RestSharp.Extensions;
 
 namespace RestSharp.Serializers
 {
+    #if !UNITY
     /// <summary>
     /// Default XML Serializer
     /// </summary>
@@ -298,4 +301,5 @@ namespace RestSharp.Serializers
         /// </summary>
         public string ContentType { get; set; }
     }
+#endif
 }

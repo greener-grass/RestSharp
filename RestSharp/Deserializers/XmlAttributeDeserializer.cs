@@ -14,10 +14,10 @@
 //   limitations under the License. 
 #endregion
 
+#if !UNITY
 using System.Reflection;
 using System.Xml.Linq;
 using RestSharp.Extensions;
-
 namespace RestSharp.Deserializers
 {
     public class XmlAttributeDeserializer : XmlDeserializer
@@ -49,3 +49,4 @@ namespace RestSharp.Deserializers
         }
     }
 }
+#endif

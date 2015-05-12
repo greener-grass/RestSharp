@@ -125,13 +125,16 @@ namespace RestSharp
 
             // register default handlers
             this.AddHandler("application/json", new JsonDeserializer());
+            #if !UNITY
             this.AddHandler("application/xml", new XmlDeserializer());
+            #endif
             this.AddHandler("text/json", new JsonDeserializer());
             this.AddHandler("text/x-json", new JsonDeserializer());
             this.AddHandler("text/javascript", new JsonDeserializer());
+            #if !UNITY
             this.AddHandler("text/xml", new XmlDeserializer());
             this.AddHandler("*", new XmlDeserializer());
-
+            #endif
             this.FollowRedirects = true;
         }
 
